@@ -50,7 +50,7 @@ namespace WishList.Controllers
                 return View(model);
             }
 
-            return RedirectToAction("Home","Index");
+            return RedirectToAction("Index","Home");
         }
 
         public IActionResult Index()
