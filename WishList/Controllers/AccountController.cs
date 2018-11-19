@@ -73,6 +73,7 @@ namespace WishList.Controllers
             if (!result.Succeeded) 
             {
                 ModelState.AddModelError(string.Empty, "Invalid Login attempt");
+                return View(model);
             }
 
             return RedirectToAction("Index", "Item");
@@ -83,7 +84,7 @@ namespace WishList.Controllers
         public IActionResult Logout() 
         {
             _signInManager.SignOutAsync();
-            return View("Index", "Home");
+            return RedirectToAction("Index", "Home");
         }
 
 
