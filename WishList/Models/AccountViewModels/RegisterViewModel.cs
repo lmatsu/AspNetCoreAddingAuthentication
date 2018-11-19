@@ -14,6 +14,7 @@ namespace WishList.Models.AccountViewModels
 
         [Required]
         [MaxLength(100)]
+        [MinLength(8)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
